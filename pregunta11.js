@@ -2,7 +2,15 @@ var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
 var maximo = 0;
+var ids = [];
 var boton = document.getElementById('boton');
+
+var id111Check = document.getElementById('check111');
+var id211Check = document.getElementById('check211');
+var id311Check = document.getElementById('check311');
+var id411Check = document.getElementById('check411');
+var id511Check = document.getElementById('check511');
+var id611Check = document.getElementById('check611');
 
 boton.addEventListener('click', catchData,  false);
 
@@ -14,6 +22,39 @@ function catchData(array) {
             array.push(e.value);
         }
     });
+
+    if(id111Check.checked){
+        let textGastro = 'Restaurantes y bares';
+        ids.push(textGastro);
+    }
+
+    if(id211Check.checked){
+        let textAstro = 'Astroturismo';
+        ids.push(textAstro);
+    }
+
+    if(id311Check.checked){
+        let textHisto = 'Obras de teatro | Conciertos';
+        ids.push(textHisto);
+    }
+
+    if(id411Check.checked){
+        let textWell = 'Retiros espirituales';
+        ids.push(textWell);
+    }
+
+    if(id511Check.checked){
+        let textWell = 'Paseos en barco | Cruceros | Sunsets';
+        ids.push(textWell);
+    }
+
+    if(id611Check.checked){
+        let textGastro = 'Autopreparación de productos (aceite de oliva, vino, etc.)';
+        ids.push(textGastro);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p11', JSON.stringify(ids));
 
     arrayOrder = array.sort();
     var became = sessionStorage.setItem('pregunta11', JSON.stringify(arrayOrder));

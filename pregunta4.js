@@ -2,7 +2,14 @@ var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
 var maximo = 0;
+var ids = [];
 var boton = document.getElementById('boton');
+
+var id14Check = document.getElementById('check14');
+var id24Check = document.getElementById('check24');
+var id34Check = document.getElementById('check34');
+var id44Check = document.getElementById('check44');
+var id54Check = document.getElementById('check54');
 
 boton.addEventListener('click', catchData,  false);
 
@@ -14,6 +21,34 @@ function catchData(array) {
             array.push(e.value);
         }
     });
+
+    if(id14Check.checked){
+        let textGastro = 'Planificar la lista de restaurantes a los que acudirás o los platos típicos a probar';
+        ids.push(textGastro);
+    }
+
+    if(id24Check.checked){
+        let textHisto = 'Diseñar la ruta e investigar los rincones que tienes que visitar';
+        ids.push(textHisto);
+    }
+
+    if(id34Check.checked){
+        let textWell = 'Asegurar que el hospedaje tenga spa o terapias para cuidarte';
+        ids.push(textWell);
+    }
+
+    if(id44Check.checked){
+        let textOut = 'Revisar reseñas de rutas de trekking o actividades al aire libre disponibles';
+        ids.push(textOut);
+    }
+
+    if(id54Check.checked){
+        let textAstro = 'Buscar una zona donde poder observar el cielo y las estrellas';
+        ids.push(textAstro);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p4', JSON.stringify(ids));
 
     arrayOrder = array.sort();
 

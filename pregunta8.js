@@ -2,7 +2,15 @@ var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
 var maximo = 0;
+var ids = [];
 var boton = document.getElementById('boton');
+
+var id18Check = document.getElementById('check18');
+var id28Check = document.getElementById('check28');
+var id38Check = document.getElementById('check38');
+var id48Check = document.getElementById('check48');
+var id58Check = document.getElementById('check58');
+var id68Check = document.getElementById('check68');
 
 boton.addEventListener('click', catchData,  false);
 
@@ -14,6 +22,39 @@ function catchData(array) {
             array.push(e.value);
         }
     });
+
+    if(id18Check.checked){
+        let textWell = 'Relajándote en un jacuzzi';
+        ids.push(textWell);
+    }
+
+    if(id28Check.checked){
+        let textOut = 'Disfrutando de la naturaleza';
+        ids.push(textOut);
+    }
+
+    if(id38Check.checked){
+        let textGastro = 'Comiendo en el restaurante de moda';
+        ids.push(textGastro);
+    }
+
+    if(id48Check.checked){
+        let textAstro = 'Observando las estrellas en la tranquilidad de la noche';
+        ids.push(textAstro);
+    }
+
+    if(id58Check.checked){
+        let textHisto = 'Visitando una plaza o monumento histórico';
+        ids.push(textHisto);
+    }
+
+    if(id68Check.checked){
+        let textGastro = 'Visitando una bodega y sus viñedos';
+        ids.push(textGastro);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p8', JSON.stringify(ids));
 
     arrayOrder = array.sort();
     var became = sessionStorage.setItem('pregunta8', JSON.stringify(arrayOrder));

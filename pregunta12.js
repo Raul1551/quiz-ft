@@ -2,7 +2,15 @@ var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
 var maximo = 0;
+var ids = [];
 var boton = document.getElementById('boton');
+
+var id112Check = document.getElementById('check112');
+var id212Check = document.getElementById('check212');
+var id312Check = document.getElementById('check312');
+var id412Check = document.getElementById('check412');
+var id512Check = document.getElementById('check512');
+var id612Check = document.getElementById('check612');
 
 boton.addEventListener('click', catchData,  false);
 
@@ -14,6 +22,39 @@ function catchData(array) {
             array.push(e.value);
         }
     });
+
+    if(id112Check.checked){
+        let textWell = 'Parques y santuarios naturales';
+        ids.push(textWell);
+    }
+
+    if(id212Check.checked){
+        let textOut = 'Actividades acuáticas';
+        ids.push(textOut);
+    }
+
+    if(id312Check.checked){
+        let textGastro = 'Clases de cocina local';
+        ids.push(textGastro);
+    }
+
+    if(id412Check.checked){
+        let textHisto = 'Actividades artesanales';
+        ids.push(textHisto);
+    }
+
+    if(id512Check.checked){
+        let textWell = 'Masajes relajantes y tratamientos';
+        ids.push(textWell);
+    }
+
+    if(id612Check.checked){
+        let textHisto = 'Museos y exposiciones';
+        ids.push(textHisto);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p12', JSON.stringify(ids));
 
     arrayOrder = array.sort();
     var became = sessionStorage.setItem('pregunta12', JSON.stringify(arrayOrder));

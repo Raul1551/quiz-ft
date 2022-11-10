@@ -2,7 +2,15 @@ var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
 var maximo = 0;
+var ids = [];
 var boton = document.getElementById('boton');
+
+var id110Check = document.getElementById('check110');
+var id210Check = document.getElementById('check210');
+var id310Check = document.getElementById('check310');
+var id410Check = document.getElementById('check410');
+var id510Check = document.getElementById('check510');
+var id610Check = document.getElementById('check610');
 
 boton.addEventListener('click', catchData,  false);
 
@@ -14,6 +22,39 @@ function catchData(array) {
             array.push(e.value);
         }
     });
+
+    if(id110Check.checked){
+        let textWell = 'Balneario | SPA | Aguas termales';
+        ids.push(textWell);
+    }
+
+    if(id210Check.checked){
+        let textHisto = 'Festividades locales especiales';
+        ids.push(textHisto);
+    }
+
+    if(id310Check.checked){
+        let textGastro = 'Cata de vinos | Visita a viñedos';
+        ids.push(textGastro);
+    }
+
+    if(id410Check.checked){
+        let textHisto = 'Visitas a plazas y monumentos';
+        ids.push(textHisto);
+    }
+
+    if(id510Check.checked){
+        let textAstro = 'Miradores nocturnos';
+        ids.push(textAstro);
+    }
+
+    if(id610Check.checked){
+        let textOut = 'Visitas a playas';
+        ids.push(textOut);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p10', JSON.stringify(ids));
 
     arrayOrder = array.sort();
     var became = sessionStorage.setItem('pregunta10', JSON.stringify(arrayOrder));

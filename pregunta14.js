@@ -1,10 +1,20 @@
 var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
+var ids = [];
 var maximo = 0;
 var boton = document.getElementById('boton');
 
-boton.addEventListener('click', catchData,  false);
+var id114Check = document.getElementById('check114');
+var id214Check = document.getElementById('check214');
+var id314Check = document.getElementById('check314');
+var id414Check = document.getElementById('check414');
+var id514Check = document.getElementById('check514');
+var id614Check = document.getElementById('check614');
+var id714Check = document.getElementById('check714');
+var id814Check = document.getElementById('check814');
+
+boton.addEventListener('click',  catchData, false);
 
 function catchData(array) {
 
@@ -15,9 +25,53 @@ function catchData(array) {
         }
     });
 
+    if(id114Check.checked){
+        let textHisto1 = 'Ciudades con encanto';
+        ids.push(textHisto1);
+    }
+
+    if(id214Check.checked){
+        let textOut1 = 'Ruta de playas';
+        ids.push(textOut1);
+    }
+
+    if(id314Check.checked){
+        let textWell = 'Escapadas a Spas o talleres de yoga al aire libre';
+        ids.push(textWell);
+    }
+
+    if(id414Check.checked){
+        let textHisto2 = 'Rutas de Castillos o Patrimonio de la Humanidad';
+        ids.push(textHisto2);
+    }
+
+    if(id514Check.checked){
+        let textGastro = 'Visité bodegas y viñedos';
+        ids.push(textGastro);
+    }
+
+    if(id614Check.checked){
+        let textAstro = 'Observación de las perseidas';
+        ids.push(textAstro);
+    }
+
+    if(id714Check.checked){
+        let textOut2 = 'Rutas de trekking';
+        ids.push(textOut2);
+    }
+
+    if(id814Check.checked){
+        let textGastro2 = 'Reservé restaurantes reconocidos en zonas alejadas';
+        ids.push(textGastro2);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p14', JSON.stringify(ids));
+
     arrayOrder = array.sort();
     var became = sessionStorage.setItem('pregunta14', JSON.stringify(arrayOrder));
     console.log(became);
+
     let unicoElemento = [];
     let vecesRepetido = [];
     let contador = 1;

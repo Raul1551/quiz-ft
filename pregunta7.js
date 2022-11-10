@@ -2,7 +2,14 @@ var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
 var maximo = 0;
+var ids = [];
 var boton = document.getElementById('boton');
+
+var id17Check = document.getElementById('check17');
+var id27Check = document.getElementById('check27');
+var id37Check = document.getElementById('check37');
+var id47Check = document.getElementById('check47');
+var id57Check = document.getElementById('check57');
 
 boton.addEventListener('click', catchData,  false);
 
@@ -14,6 +21,34 @@ function catchData(array) {
             array.push(e.value);
         }
     });
+
+    if(id17Check.checked){
+        let textAstro = 'Donde vivir experiencias y sensaciones únicas observando el cielo estrellado y sus constelaciones';
+        ids.push(textAstro);
+    }
+
+    if(id27Check.checked){
+        let textWell = 'Donde poder desconectar y cuidar de mi mente y cuerpo';
+        ids.push(textWell);
+    }
+
+    if(id37Check.checked){
+        let textHisto = 'Lleno de visitas que me permitan conocer más la historia y la cultura del destino y no perderme nada';
+        ids.push(textHisto);
+    }
+
+    if(id47Check.checked){
+        let textOut = 'Que me permita conectar con la naturaleza y sentir que aporto a su sostenibilidad';
+        ids.push(textOut);
+    }
+
+    if(id57Check.checked){
+        let textGastro = 'Que me permita experimentar con la gastronomía y la cultura local';
+        ids.push(textGastro);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p7', JSON.stringify(ids));
 
     arrayOrder = array.sort();
     var became = sessionStorage.setItem('pregunta7', JSON.stringify(arrayOrder));

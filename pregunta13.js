@@ -2,7 +2,14 @@ var array = [];
 var checks = document.querySelectorAll('.datoInput');
 var arrayOrder = [];
 var maximo = 0;
+var ids = [];
 var boton = document.getElementById('boton');
+
+var id113Check = document.getElementById('check113');
+var id213Check = document.getElementById('check213');
+var id313Check = document.getElementById('check313');
+var id413Check = document.getElementById('check413');
+var id513Check = document.getElementById('check513');
 
 boton.addEventListener('click', catchData,  false);
 
@@ -14,6 +21,34 @@ function catchData(array) {
             array.push(e.value);
         }
     });
+
+    if(id113Check.checked){
+        let textHisto = 'Foto o souvenir de algún monumento histórico o natural';
+        ids.push(textHisto);
+    }
+
+    if(id213Check.checked){
+        let textGastro = 'Productos de la zona';
+        ids.push(textGastro);
+    }
+
+    if(id313Check.checked){
+        let textGastro = 'Vinos del lugar';
+        ids.push(textGastro);
+    }
+
+    if(id413Check.checked){
+        let textHisto = 'Artesanía local';
+        ids.push(textHisto);
+    }
+
+    if(id513Check.checked){
+        let textWell = 'Productos y aceites esenciales para relajarme en casa';
+        ids.push(textWell);
+    }
+
+    console.log(ids);
+    sessionStorage.setItem('p13', JSON.stringify(ids));
 
     arrayOrder = array.sort();
     var became = sessionStorage.setItem('pregunta13', JSON.stringify(arrayOrder));

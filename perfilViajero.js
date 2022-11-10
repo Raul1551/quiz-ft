@@ -14,6 +14,15 @@ var resultado12 = JSON.parse(sessionStorage.getItem("pregunta12"));
 var resultado13 = JSON.parse(sessionStorage.getItem("pregunta13"));
 var resultado14 = JSON.parse(sessionStorage.getItem("pregunta14"));
 
+var p4 = JSON.parse(sessionStorage.getItem("p4"));
+var p7 = JSON.parse(sessionStorage.getItem("p7"));
+var p8 = JSON.parse(sessionStorage.getItem("p8"));
+var p10 = JSON.parse(sessionStorage.getItem("p10"));
+var p11 = JSON.parse(sessionStorage.getItem("p11"));
+var p12 = JSON.parse(sessionStorage.getItem("p12"));
+var p13 = JSON.parse(sessionStorage.getItem("p13"));
+var p14 = JSON.parse(sessionStorage.getItem("p14"));
+
 
 
 function elQueMasAparece() {
@@ -138,17 +147,17 @@ function elQueMasAparece() {
             pregunta1: resultado1,
             pregunta2: resultado2,
             pregunta3: resultado3,
-            pregunta4: resultado4,
+            pregunta4: p4,
             pregunta5: resultado5,
             pregunta6: resultado6,
-            pregunta7: resultado7,
-            pregunta8: resultado8,
+            pregunta7: p7,
+            pregunta8: p8,
             pregunta9: resultado9,
-            pregunta10: resultado10,
-            pregunta11: resultado11,
-            pregunta12: resultado12,
-            pregunta13: resultado13,
-            pregunta14: resultado14
+            pregunta10: p10,
+            pregunta11: p11,
+            pregunta12: p12,
+            pregunta13: p13,
+            pregunta14: p14
         }
     } 
     ];
@@ -156,15 +165,15 @@ function elQueMasAparece() {
     const resultJson = JSON.stringify(result);
 
 
-    /* fetch('http://localhost:3000/create', {
+    fetch('http://localhost:3000/create', {
+        method: 'POST',
+        body: resultJson
+    }); 
+
+    /*  fetch('https://test-bbdd-quiz-production.up.railway.app/create', {
         method: 'POST',
         body: resultJson
     }); */
-
-     fetch('https://test-bbdd-quiz-production.up.railway.app/create', {
-        method: 'POST',
-        body: resultJson
-    });
 
     /* console.log(nombre, apellido, email, telefono);
     console.log(mas_frecuente); */
