@@ -5,6 +5,7 @@ var maximo = 0;
 var ids = [];
 var boton = document.getElementById('boton');
 
+/* Variables para obtener texto de preguntas categorizadas */
 var id14Check = document.getElementById('check14');
 var id24Check = document.getElementById('check24');
 var id34Check = document.getElementById('check34');
@@ -22,6 +23,7 @@ function catchData(array) {
         }
     });
 
+    /* Obtener texto de las respuestas chequeadas */
     if(id14Check.checked){
         let textGastro = 'Planificar la lista de restaurantes a los que acudirás o los platos típicos a probar';
         ids.push(textGastro);
