@@ -165,18 +165,18 @@ function elQueMasAparece() {
     const resultJson = JSON.stringify(result);
 
 
-    fetch('http://localhost:3000/create', {
+    /* fetch('http://localhost:3000/create', {
         method: 'POST',
         body: resultJson
-    }); 
+    });  */
 
     
 
 
-      /* fetch('https://test-bbdd-quiz-production.up.railway.app/create', {
+      fetch('https://test-bbdd-quiz-production.up.railway.app/create', {
         method: 'POST',
         body: resultJson
-    });  */
+    }); 
 
     /* console.log(nombre, apellido, email, telefono);
     console.log(mas_frecuente); */
