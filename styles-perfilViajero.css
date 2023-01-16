@@ -89,6 +89,24 @@ a:hover{
     color: #4cb1a0;
 }
 
+.container-button{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.questionButton{
+    display: inline-block;
+    margin: 20px;
+    padding: 1px;
+    align-content: center;
+}
+
+.questionButton a{
+    padding: 5px;
+}
+
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
     

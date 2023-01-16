@@ -49,6 +49,7 @@ h3{
     position: relative;
     left: 40px;
     bottom: 13px;
+    padding-right: 50px;
 }
 .col:hover{
     opacity: calc(0.75);
@@ -81,7 +82,7 @@ input[type=radio]:checked + label:before{
     font-family: "Times New Roman";
     color: #b46f0f;
 }
-#p2{
+#ptest{
     display: flex;
     justify-content: space-between;
 }
@@ -128,28 +129,6 @@ input[type=radio]:checked + label:before{
 .boton-anterior:active{
     color: blue;
 }
-
-.questionButton{
-    background-color: #000;
-    color: #ECD66C;
-    font-size: 24px;
-    /*cursor: not-allowed;*/
-    cursor: pointer;
-    border-width: 0px;
-    /*opacity: 0.4;*/
-    border-radius: 5px;
-    font-weight: 400;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-bottom: 50px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 15px;
-}
-
-.questionButton:active{
-    color: blue;
-}
 .container-bar {
     background-color: rgb(61, 61, 61);
     max-width: 100%;
@@ -171,20 +150,19 @@ input[type=radio]:checked + label:before{
 }
 
 .html {
-    width: 14%;
+    width: 35%;
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
-    body{
+    body {
         font-size: 14px;
-    };
-
+    }
 }
 
-/* Large devices (desktops, 992px and up) */ 
+/* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
-    .container-columns{
+    .container-columns {
         display: flex;
         justify-content: center;
         display: grid;

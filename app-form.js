@@ -12,7 +12,6 @@ function catching() {
     let datosJson = JSON.stringify(datos);
     sessionStorage.setItem("usuario", datosJson);
 
-
     if (datos.name == "") {
         alert("El nombre es obligatorio");
         document.getElementById("get-name").focus();
@@ -41,7 +40,6 @@ function catching() {
 
         }
     }
-
 };
 
 
