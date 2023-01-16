@@ -147,7 +147,7 @@ function elQueMasAparece() {
     // Variables de sub-perfiles
 
      var premium = ' premium';
-    var low_cost = ' economico';
+    var low_cost = ' moderado';
 
     var respPremium = "Me gusta vivir y disfrutar el viaje al máximo sin importar el costo";
     var respLow = "Solo me gasto el dinero en experiencias o lugares muy concretos";
